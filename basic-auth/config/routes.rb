@@ -3,7 +3,22 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root :to => 'home#index'
+
+  # Authentication routes (http://www.codeproject.com/Articles/575551/User-Authentication-in-Ruby-on-Rails - copied July 15, 2014 by K.E. @KnowledgeFactor)
+
+  get 'sign_in' => 'authentication#sign_in'
+  post 'sign_in' => 'authentication#login'
+
+  get 'signed_out' => 'authentication#signed_out'
+  get 'change_password' => 'authentication#change_password'
+  get 'forgot_password' => 'authentication#forgot_password'
+
+  get 'new_user' => 'authentication#new_user'
+  put 'new_user' => 'authentication#register'
+
+  get 'password_sent' => 'authentication#password_sent'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
