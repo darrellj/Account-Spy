@@ -27,3 +27,9 @@
     margin-bottom: 10px;
     background-color: #A3B15A;
 }
+
+#error_message {
+    color: red;
+    font-weight: bold;
+}
+

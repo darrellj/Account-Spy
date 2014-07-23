@@ -11,11 +11,13 @@ Rails.application.routes.draw do
   post 'sign_in' => 'authentication#login'
 
   get 'signed_out' => 'authentication#signed_out'
-  get 'change_password' => 'authentication#change_password'
   get 'forgot_password' => 'authentication#forgot_password'
 
   get 'new_user' => 'authentication#new_user'
   put 'new_user' => 'authentication#register'
+
+  get 'account_settings' => 'authentication#account_settings'
+  put 'account_settings' => 'authentication#set_account_info'
 
   get 'password_sent' => 'authentication#password_sent'
 

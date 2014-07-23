@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :username, :password, :password_confirmation
-  attr_accessor :password
+  attr_accessible :email, :username, :password, :password_confirmation, :new_password, :new_password_confirmation
+  attr_accessor :password, :new_password
   before_save :encrypt_password
 
   validates_confirmation_of :password
+  validates_confirmation_of :new_password, :if => Proc.new {|user| !user.new_password.nil? && !user.new_password.empty? }
   validates_presence_of :password, :on => :create
   validates_presence_of :email, :on => :create
   validates_presence_of :username, :on => :create
