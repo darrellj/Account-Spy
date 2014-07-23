@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Account Spy</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <button type="button" class="btn btn-primary navbar-right" id="acct-select" data-toggle="modal" data-target="#acct">Select Accounts</button>
+          <!-- <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <p class="bg-primary">Accounts</p>
+          <ul class="nav nav-sidebar">
+            <li><p>Knowledge Factor</p></li>
+            <li><p>Accenture</p></li>
+            <li><p>Accenture Demo</p></li>
+            <li><p>AAHPM</p></li>
+            <li><p>Amplifire Demo</p></li>
+            <li><p>Ariad</p></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
+          <!-- <h1 class="page-header">Dashboard</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </div>
+
+          <h2 class="sub-header">Section title</h2> -->
+
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#basic" data-toggle="tab">Basic Info</a></li>
+            <li><a href="#integration" data-toggle="tab">Integration</a></li>
+            <li><a href="#reporting" data-toggle="tab">Reporting</a></li>
+            <li><a href="#configurations" data-toggle="tab">Configurations</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="basic">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Abbreviated Name</th>
+                      <th>UUID</th>
+                      <th>Alt Key</th>
+                      <th>Learner Count</th>
+                      <th>CDM</th>
+                      <th>CAM</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>kf</td>
+                      <td>d041919b-379d-4857-b801-17e4cc75ce16</td>
+                      <td><div class="cell"></div></td>
+                      <td>812</td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td>accenture</td>
+                      <td>1d8b9189-1114-45cc-bc78-a90b18bb029c</td>
+                      <td><div class="cell"></div></td>
+                      <td>2208</td>
+                      <td>Lynn</td>
+                      <td>Papi</td>
+                    </tr>
+                    <tr>
+                      <td>accenturedemo</td>
+                      <td>dcf42965-af06-4255-98e0-590906340275</td>
+                      <td><div class="cell"></div></td>
+                      <td>57</td>
+                      <td>Lynn</td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td>aahpm</td>
+                      <td>9c21f029-ec0a-4cd8-9f6e-51d86132ce94</td>
+                      <td><div class="cell"></div></td>
+                      <td>1371</td>
+                      <td>Tammy</td>
+                      <td>Pogge</td>
+                    </tr>
+                    <tr>
+                      <td>demo</td>
+                      <td>3d933d1c-8961-4c73-a553-b88e4fdaaa1b</td>
+                      <td><div class="cell"></div></td>
+                      <td>84</td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td>ariad</td>
+                      <td>2d85d45c-a385-4987-b0b3-4bb8d75c2a5c</td>
+                      <td><div class="cell"></div></td>
+                      <td>34</td>
+                      <td>Tammy</td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane" id="integration">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Integrated</th>
+                      <th>LMS</th>
+                      <th>Integration Method</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td>TRUE</td>
+                      <td>SumTotal</td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td>TRUE</td>
+                      <td>SumTotal</td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td>TRUE</td>
+                      <td>Portal</td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td>TRUE</td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane" id="reporting">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>JReports (Y/N)</th>
+                      <th>Reporting Version</th>
+                      <th>Number of Reports</th>
+                      <th>Interactive</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                      <td><div class="cell"></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane" id="configurations">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Demo/Reset</th>
+                      <th>Learning Version</th>
+                      <th>Landing Page</th>
+                      <th>Learning URL (welcome emai)</th>
+                      <th>Created Time</th>
+                      <th>Created By</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>TRUE</td>
+                      <td><div class="cell"></div></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>TRUE</td>
+                      <td><div class="cell"></div></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>TRUE</td>
+                      <td><div class="cell"></div></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><div class="cell"></div></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="acct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+            <div class="col-xs-6">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">Knowledge Factor
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox">Accenture
+                </label>
+              </div>
+            </div>
+            <div class="col-xs-6">
+            </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Submit changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <script type="text/javascript">//make sure this is below jquery and bootstrap
+      $('#basic a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+      $('#basic a[href="#basic"]').tab('show')
+      $('#integration a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+      $('#integration a[href="#integration"]').tab('show')
+      $('#reporting a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+      $('#reporting a[href="#reporting"]').tab('show')
+      $('#configurations a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+      $('#configurations a[href="#configurations"]').tab('show')
+    </script>
+  </body>
+</html>
